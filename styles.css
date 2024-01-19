@@ -8,35 +8,57 @@
 
 body {
   font-family: "Bai Jamjuree", sans-serif;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 123px 32px 53.25px;
+  align-items: center; */
 }
+
+h2,
+h1 {
+  width: 311px;
+}
+
+p {
+  font-size: 16px;
+  color: #9eabb2;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  letter-spacing: 0.12px;
+  text-align: center;
+  width: 311px;
+}
+
 .photo-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1439px;
-  height: 363px;
+  width: 100%;
+  padding: 123px 125px 66px;
   mix-blend-mode: color;
   background-image: url(./images/bg-header-mobile.png);
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  gap: 64px;
+  background-size: cover;
 }
-header {
+.header-p {
+  margin-top: 16px;
+}
+main {
+  padding: 0 32px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
-header h1 {
+.title-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-text h1 {
   color: #4c545c;
   text-align: center;
   font-size: 32px;
@@ -44,19 +66,10 @@ header h1 {
   font-weight: 600;
   line-height: normal;
   letter-spacing: -0.522px;
-  margin-top: -50px;
-  text-align: center;
 }
-header p {
-  color: #9eabb2;
-  text-align: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; /* 162.5% */
-  letter-spacing: 0.12px;
-  margin-top: 16px;
-  text-align: center;
+
+button {
+  cursor: pointer;
 }
 
 .buttons {
@@ -86,11 +99,22 @@ header p {
   background: #26bba4;
   box-shadow: 0px 10px 20px 0px rgba(137, 229, 199, 0.5),
     0px -3px 0px 0px rgba(0, 0, 0, 0.15) inset;
+  transition: 0.3s;
 }
 .buttons .mac {
   background: #6174ff;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1),
     0px -3px 0px 0px rgba(0, 0, 0, 0.15) inset;
+  transition: 0.3s;
+}
+
+.buttons .ios:hover {
+  background: #78e7d6;
+  transition: 0.3s;
+}
+.buttons .mac:hover {
+  background: #929ce6;
+  transition: 0.3s;
 }
 
 .snippets {
@@ -100,6 +124,11 @@ header p {
   align-items: center;
   margin-top: 160px;
 }
+.main-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .snippet-content {
   display: flex;
@@ -107,8 +136,44 @@ header p {
   justify-content: center;
   align-items: center;
 }
+.snippet-flex-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  text-align: center;
+  margin-top: 56px;
+}
 
-.snippets h2 {
+.flex-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.main p {
+  margin-top: 33px;
+}
+
+.snippet-content img {
+  width: 312px;
+  height: 238px;
+  margin-top: 65px;
+}
+
+.snippet-flex-group h3 {
+  color: #4c545c;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.391px;
+}
+
+.all-title {
   color: #4c545c;
   text-align: center;
   font-size: 28px;
@@ -117,30 +182,105 @@ header p {
   line-height: normal;
   letter-spacing: -0.457px;
 }
-.header-p {
-  color: #9eabb2;
-  text-align: center;
 
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; /* 162.5% */
-  letter-spacing: 0.12px;
-  margin-top: 33px;
-}
-
-.snippets {
+.clipboard {
+  margin-top: 186px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.snippet-content img {
-  width: 312px;
-  height: 238px;
-  margin-top: 65px;
-}
-.all-title {
+.clipboard img {
   width: 311px;
+  height: 182px;
+  flex-shrink: 0;
+  margin-top: 64px;
+}
+.supercharge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px;
+}
+.supercharge-flex-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 55px;
+  margin-top: 90px;
+}
+
+.super-flex-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.supercharge-header p {
+  margin-top: 11px;
+}
+
+.super-flex-item p {
+  margin-top: 18px;
+}
+.super-flex-item h3 {
+  margin-top: 40px;
+}
+
+.logos {
+  margin-top: 131px;
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+.download-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 170px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 52px 0;
+  margin-top: 170px;
+  background: rgba(158, 171, 178, 0.1);
+}
+
+.links {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+.links a {
+  text-decoration: none;
+  color: #4c545c;
+  text-align: center;
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 166.667% */
+  letter-spacing: 0.135px;
+}
+.icons {
+  margin-top: 50px;
+  display: flex;
+  gap: 40px;
+}
+
+.icons .twitter:hover {
+  fill: rgba(38, 187, 164, 1);
 }
